@@ -7,8 +7,8 @@ public class APIPings {
 
     public static void Sac() throws IOException {
         SendError SE1 = new SendError();
-        URL url = new URL("https://keyscalerdemo.sac.keyscaler.com/service-access-controller/health/ping");
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        URL sac = new URL("https://keyscalerdemo.sac.keyscaler.com/service-access-controller/health/ping");
+        HttpURLConnection conn = (HttpURLConnection) sac.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
         //Getting the response code
@@ -29,8 +29,8 @@ public class APIPings {
     }
     public static void DAE() throws IOException {
         SendError SE2 = new SendError();
-        URL url = new URL("https://keyscalerdemo.sac.keyscaler.com/service/api/health/ping");
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        URL dae = new URL("https://keyscalerdemo.sac.keyscaler.com/service/api/health/ping");
+        HttpURLConnection conn = (HttpURLConnection) dae.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
         //Getting the response code
@@ -51,8 +51,8 @@ public class APIPings {
     }
     public static void KMS() throws IOException {
         SendError SE3 = new SendError();
-        URL url = new URL("https://keyscalerdemo.sac.keyscaler.com/service-access-controller/health/ping");
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        URL kms = new URL("https://keyscalerdemo.sac.keyscaler.com/service-access-controller/health/ping");
+        HttpURLConnection conn = (HttpURLConnection) kms.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
         //Getting the response code
@@ -75,8 +75,8 @@ public class APIPings {
 
         public static void CP() throws IOException {
         SendError SE4 = new SendError();
-        URL url = new URL("https://keyscalerdemo.cp.keyscaler.com/cp/api/health/ping");
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        URL cp = new URL("https://keyscalerdemo.cp.keyscaler.com/cp/api/health/ping");
+        HttpURLConnection conn = (HttpURLConnection) cp.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
         //Getting the response code
