@@ -27,11 +27,11 @@ public class LogparseApplication {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				/*try {
+				try {
 					APIPings.KMS();
 				} catch (IOException e) {
 					e.printStackTrace();
-				}*/
+				}
 				try {
 					APIPings.CP();
 				} catch (IOException e) {

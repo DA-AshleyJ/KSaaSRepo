@@ -6,7 +6,7 @@ import java.net.URL;
 public class APIPings {
 
     public static void Sac() throws IOException {
-        SendError SE = new SendError();
+        SendError SE1 = new SendError();
         URL url = new URL("https://keyscalerdemo.sac.keyscaler.com/service-access-controller/health/ping");
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
@@ -15,7 +15,7 @@ public class APIPings {
         int responsecode = conn.getResponseCode();
         String myString = Integer.toString(responsecode);
         if (responsecode != 200) {
-            SE.newWebHook(myString, "SAC");
+            SE1.newWebHook(myString, "SAC");
             conn.disconnect();
             return;
         }
@@ -28,60 +28,66 @@ public class APIPings {
         return;
     }
     public static void DAE() throws IOException {
-        SendError SE = new SendError();
+        SendError SE2 = new SendError();
         URL url = new URL("https://keyscalerdemo.sac.keyscaler.com/service/api/health/ping");
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
         //Getting the response code
-        int responsecode = conn.getResponseCode();
-        String myString = Integer.toString(responsecode);
-        if (responsecode != 200) {
-            SE.newWebHook(myString, "DAE");
+        int responsecode2 = conn.getResponseCode();
+        String myString = Integer.toString(responsecode2);
+        if (responsecode2 != 200) {
+            SE2.newWebHook(myString, "DAE");
             conn.disconnect();
             return;
         }
-        if (responsecode == 200){
+        if (responsecode2 == 200){
             conn.disconnect();
+            return;
+        }
+        conn.disconnect();
+        KMS();
+        return;
+    }
+    public static void KMS() throws IOException {
+        SendError SE3 = new SendError();
+        URL url = new URL("https://keyscalerdemo.sac.keyscaler.com/service-access-controller/health/ping");
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        conn.connect();
+        //Getting the response code
+        int responsecode3 = conn.getResponseCode();
+        String myString = Integer.toString(responsecode3);
+        if (responsecode3 != 200) {
+            SE3.newWebHook(myString, "KMS");
+            conn.disconnect();
+            return;
+        }
+        if (responsecode3 == 200){
+            conn.disconnect();
+
             return;
         }
         conn.disconnect();
         CP();
         return;
     }
-/*    public static void KMS() throws IOException {
-        SendError SE = new SendError();
-        URL url = new URL("https://keyscalerdemo.sac.keyscaler.com/service-access-controller/health/ping");
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod("GET");
-        conn.connect();
-        //Getting the response code
-        int responsecode = conn.getResponseCode();
-        String myString = Integer.toString(responsecode);
-        if (responsecode != 200) {
-            SE.newWebHook(myString, "KMS");
-            conn.disconnect();
-            return;
-        }
-        conn.disconnect();
-        CP();
-        return;
-    }*/
-    public static void CP() throws IOException {
-        SendError SE = new SendError();
+
+        public static void CP() throws IOException {
+        SendError SE4 = new SendError();
         URL url = new URL("https://keyscalerdemo.cp.keyscaler.com/cp/api/health/ping");
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
         //Getting the response code
-        int responsecode = conn.getResponseCode();
-        String myString = Integer.toString(responsecode);
-        if (responsecode != 200) {
-            SE.newWebHook(myString, "CP");
+        int responsecode4 = conn.getResponseCode();
+        String myString = Integer.toString(responsecode4);
+        if (responsecode4 != 200) {
+            SE4.newWebHook(myString, "CP");
             conn.disconnect();
             return;
         }
-        if (responsecode == 200){
+        if (responsecode4 == 200){
             conn.disconnect();
             
             return;
