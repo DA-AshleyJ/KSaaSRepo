@@ -1,4 +1,4 @@
-package com.ksaas.logparse;
+package com.apiping.apipings;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(LogparseApplication.class);
+		return application.sources(apiPingApplication.class);
 	}
 
 }

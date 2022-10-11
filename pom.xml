@@ -8,12 +8,12 @@
 		<version>2.6.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ksaas</groupId>
+	<groupId>com.apiping</groupId>
 	<artifactId>logparse</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>logparse</name>
-	<description>KSaaS Log Parsing</description>
+	<name>apiPing</name>
+	<description>API Ping Application</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
