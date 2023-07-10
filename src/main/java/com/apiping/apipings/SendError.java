@@ -9,7 +9,7 @@ import java.nio.charset.StandardCharsets;
 public class SendError {
 
     public void newWebHook(String exception, String ServiceName) throws IOException {
-        URL url = new URL("https://netauthority.webhook.office.com/webhookb2/2c28a2c3-a221-4ef7-b73f-d436c52ad448@10ebeb0d-e7ea-43f2-84da-966998200c07/IncomingWebhook/75f4ece6d0b2441e94ac3dd782bb042c/85651f04-7eb7-4afe-ad12-cfb63e91559a"); // This is the webhook url needed for teams channel.
+        URL url = new URL("https://"); // This is the webhook url needed for teams channel.
         HttpURLConnection http = (HttpURLConnection)url.openConnection();
         http.setRequestMethod("POST");
         http.setDoOutput(true);
@@ -23,7 +23,7 @@ public class SendError {
         http.disconnect();
     }
    /* public String createTicket(String exception, String Env) throws IOException {
-            URL url = new URL("https://deviceauthority.zendesk.com/api/v2/tickets.json");
+            URL url = new URL("https://");
             HttpURLConnection http = (HttpURLConnection)url.openConnection();
             http.setRequestMethod("POST");
             http.setDoOutput(true);
