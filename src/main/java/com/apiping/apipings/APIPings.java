@@ -8,7 +8,7 @@ public class APIPings {
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(APIPings.class);
     public static void Sac() throws IOException {
         SendError SE1 = new SendError();
-        URL sac = new URL("https://keyscalerdemo.sac.keyscaler.com/service-access-controller/health/ping");
+        URL sac = new URL("https://");
         HttpURLConnection conn = (HttpURLConnection) sac.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
@@ -30,7 +30,7 @@ public class APIPings {
 
     public static void DAE() throws IOException {
         SendError SE2 = new SendError();
-        URL dae = new URL("https://keyscalerdemo.sac.keyscaler.com/service/api/health/ping");
+        URL dae = new URL("https://");
         HttpURLConnection conn = (HttpURLConnection) dae.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
@@ -52,7 +52,7 @@ public class APIPings {
 
     public static void KMS() throws IOException {
         SendError SE3 = new SendError();
-        URL kms = new URL("https://keyscalerdemo.sac.keyscaler.com/service-access-controller/health/ping");
+        URL kms = new URL("https://");
         HttpURLConnection conn = (HttpURLConnection) kms.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
@@ -74,7 +74,7 @@ public class APIPings {
 
     public static void CP() throws IOException {
         SendError SE4 = new SendError();
-        URL cp = new URL("https://keyscalerdemo.cp.keyscaler.com/cp/api/health/ping");
+        URL cp = new URL("https://");
         HttpURLConnection conn = (HttpURLConnection) cp.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
